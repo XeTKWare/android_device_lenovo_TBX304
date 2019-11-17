@@ -17,10 +17,10 @@
 # inherit from common tb-common
 -include device/lenovo/tb-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/lenovo/TBX704
+DEVICE_PATH := device/lenovo/TBX304
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := TB-X704A,TB-X704F,TB-X704L,TBX704,X704A,X704F,X704L,tb_x704a,tb_x704f,tb_x704l
+TARGET_OTA_ASSERT_DEVICE := TB-X304A,TB-X304F,TB-X304L,TBX304,X304A,X304F,X304L,tb_x304a,tb_x304f,tb_x304l
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -36,11 +36,11 @@ SF_PRIMARY_DISPLAY_ORIENTATION := 90
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_tbx704
-TARGET_RECOVERY_DEVICE_MODULES := libinit_tbx704
+TARGET_INIT_VENDOR_LIB := libinit_tbx304
+TARGET_RECOVERY_DEVICE_MODULES := libinit_tbx304
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_tbx704_defconfig
+TARGET_KERNEL_CONFIG := lineageos_tbx304_defconfig
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4294967296
@@ -53,4 +53,4 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/GT9110P/gt9110p/gesture"
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Inherit from the proprietary version
--include vendor/lenovo/TBX704/BoardConfigVendor.mk
+-include vendor/lenovo/TBX304/BoardConfigVendor.mk

@@ -20,10 +20,10 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 # AAPT
-PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_AAPT_PREF_CONFIG := normal
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/lenovo/TBX704/TBX704-vendor.mk)
+$(call inherit-product-if-exists, vendor/lenovo/TBX304/TBX304-vendor.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -34,11 +34,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
 # Biometrics
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.tbx704
+# PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service.tbx304
 
 # Permissions
-PRODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 # Sensors
